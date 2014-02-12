@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>World Migration</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+
+	<link rel="stylesheet" href="css/style.css"/>	
+	<link rel="stylesheet" href="css/leaflet.css"/>
+	<link rel="stylesheet" href="css/Control.OSMGeocoder.css"/>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+	<link rel="stylesheet" href="http://makinacorpus.github.io/Leaflet.FileLayer/Font-Awesome/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
+	<link rel="stylesheet" href="css/L.Control.Sidebar.css" />
+	<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css"/>
+
+    <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" /><![endif]-->
+	
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		
+		html, body, #map {
+			width: 100%;
+			height: 100%;
+		}
+		
+
+		.bartext {
+            font-style: italic;
+            color: #AAA;
+        }
+
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+
+		.legend {
+			text-align: left;
+			line-height: 18px;
+			color: #555;
+		}
+		.legend i {
+			width: 18px;
+			height: 18px;
+			float: left;
+			margin-right: 8px;
+			opacity: 0.7;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="sidebar">
+    <h1>International Migration Population</h1>
+    
+    <h2 style="color: red">Application Background</h2>
+	<p class="bartext">When individuals cross the boundaries of their own countries and go to other host states to stay for some minimum length of time, the “International Migration” occurs. People migrate for the following reasons.
+First, potential opportunities of job in another country can bring people some economic benefits. Second, the nice academic atmosphere may attract students to pursue their studies overseas for a better education. Third, when one`s parents, children or other family members migrate to another country, he may also want to live there to be with the family. Fourth, there also exist some illegal migrations. One way to category the migrants is dividing them into two groups, permanent and temporary. The first group of migrants intend to reside in the host states permanently and possibly obtain the citizenship there. While the second group just stay for a limited period of time to work or study and do not want to seek for the citizenship. Both groups of migrants do affect the economies and societies of the original countries and the countries they flow to.
+In order to have a visual impression of the status of international migration, the assignment application is mainly designed to show the inflows and outflows of people in a world view. the application gives users a tool to explore and detect the inflow and outflow population of different countries and  
+arose their insights of the reasons behind the phenomenon of "International Migration".
+	</p>       
+    <p><b>Click on the marker to show the sidebar again when you've closed it.</b></p>    
+
+        
+
+
+		  
+    </div>
+    
+
+	<form name = "myForm" action= "">Select "1 for Inflows" or "2 for Outflows"
+	<select name= "numberList" id="numberList" onchange="handleSelect(this.form);">
+		<option>1</option>
+		<option>2</option>
+	</select>
+	</form>
+	
+
+	<div id="map"></div>
+	
+	<script src="js/leaflet-src.js"></script>
+	<script src="js/leaflet.awesome-markers.js"></script>
+	<script src="js/Control.OSMGeocoder.js"></script>
+	<script src="js/leaflet.filelayer.js"></script>
+	<script src="js/togeojson.js"></script>
+	<script src="js/L.Control.Sidebar.js"></script>
+	<script src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js"></script>
+
+
+
+	<script type="text/javascript" src="data/world.js"></script>
+	<script src="js/World_Migration.js"></script>
+
+		
+	</script>
+</body>
+</html>
